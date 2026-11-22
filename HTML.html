@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RumahAnabul — Platform Adopsi Hewan Terpercaya</title>
+  <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#beranda" class="brand-logo">
+        <span class="logo-icon">🐾</span> Rumah<strong>Anabul</strong>
+      </a>
+      <nav class="nav-links">
+        <a href="#beranda" class="nav-item active-link">Beranda</a>
+        <a href="#katalog" class="nav-item">Cari Hewan</a>
+        <a href="#alur" class="nav-item">Alur Adopsi</a>
+        <!-- Button 1: Khusus Navbar -->
+        <a href="#form-adopsi" class="btn btn-nav-adopsi">
+          <span>Ajukan Adopsi</span>
+          <span class="btn-arrow">→</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+  
+  <section id="beranda" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="badge-pill">🏡 320+ Hewan Telah Menemukan Rumah</span>
+        <h1>Beri Mereka Kesempatan Kedua untuk Dicintai</h1>
+        <p>
+          Temukan sahabat berbulu yang siap menemani hari-harimu. Seluruh hewan di RumahAnabul 
+          telah melalui pemeriksaan kesehatan, vaksinasi dasar, dan siap diadopsi secara bertanggung jawab.
+        </p>
+        <div class="hero-actions">
+          <!-- Button 2: Khusus Hero Utama -->
+          <a href="#katalog" class="btn btn-hero-lihat">
+            <span>Lihat Hewan Tersedia</span>
+            <span class="btn-arrow">→</span>
+          </a>
+          <!-- Button 3: Khusus Hero Sekunder -->
+          <a href="#alur" class="btn btn-hero-syarat">
+            <span>Pelajari Syarat</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img 
+          src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80" 
+          alt="Anjing bahagia siap diadopsi"
+          class="hero-img"
+        >
+        <div class="floating-card">
+          <strong>100% Terverifikasi</strong>
+          <span>Sehat, terawat, & siap dipelihara</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="katalog" class="catalog-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Sahabat yang Menunggu Rumah Baru</h2>
+        <p>Pilih kategori di bawah untuk melihat profil hewan yang sesuai dengan lingkungan rumahmu.</p>
+      </div>
+
+      <div class="catalog-wrapper">
+        <!-- Radio Button untuk Filter -->
+        <input type="radio" name="pet-filter" id="filter-all" value="all" checked>
+        <input type="radio" name="pet-filter" id="filter-kucing" value="kucing">
+        <input type="radio" name="pet-filter" id="filter-anjing" value="anjing">
+
+        <!-- Tombol Tab Filter -->
+        <div class="filter-tabs">
+          <label for="filter-all" class="filter-btn btn-filter-all">Semua Hewan</label>
+          <label for="filter-kucing" class="filter-btn btn-filter-kucing">🐱 Kucing</label>
+          <label for="filter-anjing" class="filter-btn btn-filter-anjing">🐶 Anjing</label>
+        </div>
+
+        <!-- Info Jumlah Hewan (Diperbarui otomatis oleh JavaScript) -->
+        <div class="catalog-status">
+          <span id="pet-count-badge" class="pet-count-badge">Menampilkan 4 sahabat siap adopsi</span>
+        </div>
+
+        <!-- Grid Kartu Hewan -->
+        <div class="pet-grid" id="pet-grid">
+          <!-- Kartu 1 -->
+          <article class="pet-card kucing" data-category="kucing">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&q=80" alt="Mochi - Kucing Domestik">
+              <span class="status-badge">Sudah Vaksin</span>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3>Mochi</h3>
+                <span class="pet-gender">Betina • 1 Tahun</span>
+              </div>
+              <p class="pet-breed">Kucing Domestik Short Hair</p>
+              <p class="pet-desc">Tenang, suka dipeluk, dan sudah terbiasa menggunakan litter box.</p>
+              <!-- Button Kartu 1 (data-pet untuk auto-pilih di form) -->
+              <a href="#form-adopsi" class="btn btn-card-mochi adopt-trigger" data-pet="Mochi (Kucing)">
+                <span>Adopsi Mochi</span>
+                <span class="btn-icon">🐾</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Kartu 2 -->
+          <article class="pet-card anjing" data-category="anjing">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=600&q=80" alt="Bobo - Golden Mix">
+              <span class="status-badge">Vaksin & Steril</span>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3>Bobo</h3>
+                <span class="pet-gender">Jantan • 2 Tahun</span>
+              </div>
+              <p class="pet-breed">Golden Retriever Mix</p>
+              <p class="pet-desc">Aktif, ramah terhadap anak-anak, dan sangat senang diajak jalan pagi.</p>
+              <!-- Button Kartu 2 -->
+              <a href="#form-adopsi" class="btn btn-card-bobo adopt-trigger" data-pet="Bobo (Anjing)">
+                <span>Adopsi Bobo</span>
+                <span class="btn-icon">🐾</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Kartu 3 -->
+          <article class="pet-card kucing" data-category="kucing">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=600&q=80" alt="Luna - Kucing Calico">
+              <span class="status-badge">Sudah Steril</span>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3>Luna</h3>
+                <span class="pet-gender">Betina • 1,5 Tahun</span>
+              </div>
+              <p class="pet-breed">Kucing Calico Mix</p>
+              <p class="pet-desc">Penurut, tidak berisik, dan cocok untuk pemelihara yang tinggal di ruangan indoor.</p>
+              <!-- Button Kartu 3 -->
+              <a href="#form-adopsi" class="btn btn-card-luna adopt-trigger" data-pet="Luna (Kucing)">
+                <span>Adopsi Luna</span>
+                <span class="btn-icon">🐾</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Kartu 4 -->
+          <article class="pet-card anjing" data-category="anjing">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=600&q=80" alt="Kiko - Puppy Corgi Mix">
+              <span class="status-badge">Vaksin Pertama</span>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3>Kiko</h3>
+                <span class="pet-gender">Jantan • 8 Bulan</span>
+              </div>
+              <p class="pet-breed">Corgi Terrier Mix</p>
+              <p class="pet-desc">Cerdas, cepat belajar perintah dasar, dan penuh rasa ingin tahu.</p>
+              <!-- Button Kartu 4 -->
+              <a href="#form-adopsi" class="btn btn-card-kiko adopt-trigger" data-pet="Kiko (Anjing)">
+                <span>Adopsi Kiko</span>
+                <span class="btn-icon">🐾</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="alur" class="steps-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>3 Langkah Mudah Mengadopsi</h2>
+        <p>Proses transparan demi memastikan kesejahteraan hewan dan kesiapan adopter.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Pilih Sahabatmu</h3>
+          <p>Telusuri katalog hewan dan sesuaikan karakter hewan dengan gaya hidup serta kondisi tempat tinggalmu.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Isi Formulir & Wawancara</h3>
+          <p>Lengkapi formulir komitmen adopsi. Tim relawan kami akan menghubungi untuk sesi obrolan singkat.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Penjemputan & Rumah Baru</h3>
+          <p>Setelah disetujui, kamu dapat menjemput sahabat barumu lengkap dengan buku catatan kesehatannya.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="form-adopsi" class="form-section">
+    <div class="container form-wrapper">
+      <!-- Kolom Kiri: Info & Kartu Komitmen -->
+      <div class="form-info">
+        <span class="form-badge">💌 Langkah Awal Komitmen</span>
+        <h2>Formulir Pengajuan Adopsi</h2>
+        <p>
+          Mengadopsi adalah komitmen jangka panjang. Silakan isi data diri berikut agar tim kami 
+          dapat memproses pengajuanmu dengan tepat.
+        </p>
+
+        <div class="commitment-list">
+          <div class="commitment-item">
+            <div class="commitment-icon">💚</div>
+            <div>
+              <strong>Gratis Biaya Adopsi</strong>
+              <span>Hanya membutuhkan komitmen penuh untuk perawatan dan kasih sayang.</span>
+            </div>
+          </div>
+          <div class="commitment-item">
+            <div class="commitment-icon">🏠</div>
+            <div>
+              <strong>Lingkungan Aman & Layak</strong>
+              <span>Wajib menyediakan ruang tinggal yang bersih, aman, dan nyaman.</span>
+            </div>
+          </div>
+          <div class="commitment-item">
+            <div class="commitment-icon">📸</div>
+            <div>
+              <strong>Update Kondisi Berkala</strong>
+              <span>Bersedia berbagi kabar perkembangan anabul bersama relawan kami.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="adoption-form" id="adoption-form" novalidate>
+        <div class="form-card-header">
+          <h3>Data Calon Adopter</h3>
+          <p>Lengkapi informasi di bawah ini dengan jujur dan jelas.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" name="nama" placeholder="Contoh: Nadia Pratama" required>
+          <small class="error-msg" id="err-nama"></small>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="whatsapp">Nomor WhatsApp</label>
+            <input type="tel" id="whatsapp" name="whatsapp" placeholder="0812-XXXX-XXXX" required>
+            <small class="error-msg" id="err-whatsapp"></small>
+          </div>
+          <div class="form-group">
+            <label for="pilih-hewan">Hewan yang Dipilih</label>
+            <select id="pilih-hewan" name="pilih-hewan" required>
+              <option value="">-- Pilih Hewan --</option>
+              <option value="Mochi (Kucing)">Mochi (Kucing Domestik)</option>
+              <option value="Bobo (Anjing)">Bobo (Golden Mix)</option>
+              <option value="Luna (Kucing)">Luna (Kucing Calico)</option>
+              <option value="Kiko (Anjing)">Kiko (Corgi Mix)</option>
+              <option value="Lainnya">Lainnya</option>
+            </select>
+            <small class="error-msg" id="err-hewan"></small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Jenis Tempat Tinggal</label>
+          <div class="hunian-cards">
+            <label class="hunian-option">
+              <input type="radio" name="hunian" value="Rumah Pribadi" checked>
+              <span class="hunian-emoji">🏡</span>
+              <span class="hunian-title">Rumah Pribadi</span>
+            </label>
+            <label class="hunian-option">
+              <input type="radio" name="hunian" value="Apartemen">
+              <span class="hunian-emoji">🏢</span>
+              <span class="hunian-title">Apartemen</span>
+            </label>
+            <label class="hunian-option">
+              <input type="radio" name="hunian" value="Kos / Kontrakan">
+              <span class="hunian-emoji">🚪</span>
+              <span class="hunian-title">Kos / Kontrakan</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="label-with-counter">
+            <label for="alasan">Alasan & Pengalaman Memelihara Hewan</label>
+            <span id="char-counter" class="char-counter">0 / min. 20 karakter</span>
+          </div>
+          <textarea id="alasan" name="alasan" rows="3" placeholder="Ceritakan secara singkat kesiapan, lingkungan rumah, dan pengalamanmu..." required></textarea>
+          <small class="error-msg" id="err-alasan"></small>
+        </div>
+
+        <div class="form-group checkbox-box">
+          <label>
+            <input type="checkbox" id="komitmen-check" required>
+            <span>Saya berkomitmen merawat hewan dengan penuh tanggung jawab dan tidak menelantarkannya.</span>
+          </label>
+          <small class="error-msg" id="err-komitmen"></small>
+        </div>
+
+        <!-- Button Kirim Formulir -->
+        <button type="submit" class="btn btn-submit-adopsi">
+          <span>Kirim Pengajuan Adopsi</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="logo-icon">🐾</span> <strong>RumahAnabul</strong>
+        <p>Komunitas Penyelamatan & Adopsi Hewan Domestik.</p>
+      </div>
+      <div class="footer-meta">
+        <p>📍 Jl. Merpati No. 24, Salatiga • Buka Setiap Hari 09.00 – 17.00 WIB</p>
+        <p>&copy; 2026 RumahAnabul. Hak Cipta Dilindungi.</p>
+      </div>
+      <div class="footer-contact">
+        <span class="logo-icon">📞</span> <strong>Kontak Shelter</strong>
+        <ul>
+          <li>Email: halo@adopsipaws.id</li>
+          <li>WhatsApp: +62 812-3456-7890</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="success-modal" aria-hidden="true">
+    <div class="modal-box">
+      <div class="modal-icon">🎉</div>
+      <h3>Pengajuan Adopsi Terkirim!</h3>
+      <p class="modal-subtitle">Terima kasih telah memberi kesempatan kedua bagi sahabat berbulu kami.</p>
+      
+      <div class="modal-summary" id="modal-summary">
+      </div>
+
+      <div class="modal-actions">
+        <a href="#" id="btn-wa-lanjut" target="_blank" rel="noopener" class="btn btn-modal-wa">
+          <span>Konfirmasi via WhatsApp</span>
+          <span>💬</span>
+        </a>
+        <button type="button" id="btn-modal-close" class="btn btn-modal-tutup">
+          Tutup
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" id="back-to-top" class="btn-back-to-top" title="Kembali ke atas" aria-label="Kembali ke atas">
+    ↑
+  </button>
+
+  <script src="JS.js"></script>
+</body>
+</html>

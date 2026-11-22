@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawmily — Adopsi Hewan Peliharaan</title>
+  <meta name="description" content="Temukan sahabat berbulu baru untuk rumahmu. Adopsi anjing, kucing, dan kelinci yang sehat dan siap disayangi di Pawmily.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="#" class="brand" aria-label="Beranda Pawmily">
+        <span class="brand-icon" aria-hidden="true">🐾</span>
+        <span class="brand-text">Pawmily</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigasi Utama">
+        <a href="#tentang">Tentang</a>
+        <a href="#hewan">Cari Hewan</a>
+        <a href="#cara-adopsi">Cara Adopsi</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a href="#form-adopsi" class="btn btn-primary btn-sm">Adopsi Sekarang</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content animate-fade-up">
+          <span class="badge">Pusat Adopsi Hewan Terpercaya</span>
+          <h1>Beri Rumah Hangat untuk Sahabat Berbulu</h1>
+          <p class="hero-desc">
+            Ribuan hewan penyelamatan menanti keluarga baru yang penuh kasih. Proses adopsi di Pawmily dibuat sederhana, transparan, dan didampingi hingga mereka nyaman di rumahmu.
+          </p>
+          <div class="hero-actions">
+            <a href="#hewan" class="btn btn-primary">Lihat Daftar Hewan</a>
+            <a href="#cara-adopsi" class="btn btn-secondary">Pelajari Alurnya</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <strong>140+</strong>
+              <span>Hewan Teradopsi</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <strong>100%</strong>
+              <span>Sudah Vaksin</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <strong>Gratis</strong>
+              <span>Konsultasi Awal</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual animate-fade-up delay-1">
+          <div class="featured-card animate-float">
+            <div class="featured-header">
+              <span class="status-dot"></span>
+              <span>Siap Diadopsi Minggu Ini</span>
+            </div>
+            <div class="featured-avatar" aria-hidden="true">🐕</div>
+            <h2>Bruno, 2 Tahun</h2>
+            <p>Golden Mix • Ramah anak & suka jalan sore</p>
+            <div class="featured-tags">
+              <span>Sudah Steril</span>
+              <span>Terlatih</span>
+              <span>Penurut</span>
+            </div>
+            <a href="#form-adopsi" class="btn btn-primary btn-full">Kenalan dengan Bruno</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TENTANG / KEUNGGULAN ==================== -->
+    <section id="tentang" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Kenapa Pawmily?</span>
+          <h2>Adopsi yang Aman dan Bertanggung Jawab</h2>
+          <p>Kami memastikan setiap hewan berada dalam kondisi sehat sebelum bertemu keluarga barunya.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🩺</div>
+            <h3>Pemeriksaan Medis Lengkap</h3>
+            <p>Semua hewan telah melalui pemeriksaan dokter hewan, pemberian obat cacing, dan vaksinasi dasar.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🤝</div>
+            <h3>Pencocokan Karakter</h3>
+            <p>Kami membantu mencocokkan tingkat energi dan sifat hewan dengan ritme keseharian serta kondisi rumahmu.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🏡</div>
+            <h3>Dukungan Pasca-Adopsi</h3>
+            <p>Tim relawan kami siap menjawab pertanyaan seputar adaptasi, pakan, dan perawatan selama 30 hari pertama.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== GALERI HEWAN (PURE CSS FILTER) ==================== -->
+    <section id="hewan" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Sahabat Menanti</span>
+          <h2>Temukan Teman Barumu</h2>
+          <p>Pilih kategori di bawah ini untuk melihat hewan yang siap pulang ke rumah.</p>
+        </div>
+
+        <!-- Kontrol Filter Tanpa JS menggunakan Radio Input -->
+        <div class="filter-wrapper">
+          <input type="radio" name="pet-filter" id="filter-semua" class="filter-radio" checked>
+          <input type="radio" name="pet-filter" id="filter-kucing" class="filter-radio">
+          <input type="radio" name="pet-filter" id="filter-anjing" class="filter-radio">
+          <input type="radio" name="pet-filter" id="filter-lainnya" class="filter-radio">
+
+          <div class="filter-tabs" role="tablist" aria-label="Filter jenis hewan">
+            <label for="filter-semua" class="filter-tab">Semua (6)</label>
+            <label for="filter-kucing" class="filter-tab">Kucing (2)</label>
+            <label for="filter-anjing" class="filter-tab">Anjing (2)</label>
+            <label for="filter-lainnya" class="filter-tab">Kelinci &amp; Lainnya (2)</label>
+          </div>
+
+          <div class="pets-grid">
+            <!-- Kartu 1: Mochi (Kucing) -->
+            <article class="pet-card" data-category="kucing">
+              <div class="pet-card-top">
+                <span class="pet-badge">Kucing</span>
+                <label class="like-toggle" aria-label="Sukai Mochi">
+                  <input type="checkbox">
+                  <span class="heart-icon" aria-hidden="true">♥</span>
+                </label>
+              </div>
+              <div class="pet-avatar bg-peach" aria-hidden="true">🐈</div>
+              <div class="pet-info">
+                <div class="pet-title-row">
+                  <h3>Mochi</h3>
+                  <span class="pet-age">1 Tahun • Betina</span>
+                </div>
+                <p class="pet-bio">Tenang, suka tidur di dekat jendela, dan sangat manja saat dielus di bagian dagu.</p>
+                <div class="pet-traits">
+                  <span>Tenang</span>
+                  <span>Indoor</span>
+                  <span>Sudah Steril</span>
+                </div>
+                <a href="#form-adopsi" class="btn btn-outline btn-full">Ajukan Adopsi</a>
+              </div>
+            </article>
+
+            <!-- Kartu 2: Bruno (Anjing) -->
+            <article class="pet-card" data-category="anjing">
+              <div class="pet-card-top">
+                <span class="pet-badge">Anjing</span>
+                <label class="like-toggle" aria-label="Sukai Bruno">
+                  <input type="checkbox">
+                  <span class="heart-icon" aria-hidden="true">♥</span>
+                </label>
+              </div>
+              <div class="pet-avatar bg-sage" aria-hidden="true">🐕</div>
+              <div class="pet-info">
+                <div class="pet-title-row">
+                  <h3>Bruno</h3>
+                  <span class="pet-age">2 Tahun • Jantan</span>
+                </div>
+                <p class="pet-bio">Ceria, cepat belajar perintah dasar, dan senang menemani jalan pagi di sekitar komplek.</p>
+                <div class="pet-traits">
+                  <span>Aktif</span>
+                  <span>Ramah Anak</span>
+                  <span>Vaksin Lengkap</span>
+                </div>
+                <a href="#form-adopsi" class="btn btn-outline btn-full">Ajukan Adopsi</a>
+              </div>
+            </article>
+
+            <!-- Kartu 3: Cleo (Kucing) -->
+            <article class="pet-card" data-category="kucing">
+              <div class="pet-card-top">
+                <span class="pet-badge">Kucing</span>
+                <label class="like-toggle" aria-label="Sukai Cleo">
+                  <input type="checkbox">
+                  <span class="heart-icon" aria-hidden="true">♥</span>
+                </label>
+              </div>
+              <div class="pet-avatar bg-cream" aria-hidden="true">🐈‍⬛</div>
+              <div class="pet-info">
+                <div class="pet-title-row">
+                  <h3>Cleo</h3>
+                  <span class="pet-age">8 Bulan • Betina</span>
+                </div>
+                <p class="pet-bio">Penasaran dengan mainan bulu, pintar menggunakan litter box, dan mudah akrab dengan kucing lain.</p>
+                <div class="pet-traits">
+                  <span>Playful</span>
+                  <span>Litter Trained</span>
+                  <span>Sehat</span>
+                </div>
+                <a href="#form-adopsi" class="btn btn-outline btn-full">Ajukan Adopsi</a>
+              </div>
+            </article>
+
+            <!-- Kartu 4: Milo (Anjing) -->
+            <article class="pet-card" data-category="anjing">
+              <div class="pet-card-top">
+                <span class="pet-badge">Anjing</span>
+                <label class="like-toggle" aria-label="Sukai Milo">
+                  <input type="checkbox">
+                  <span class="heart-icon" aria-hidden="true">♥</span>
+                </label>
+              </div>
+              <div class="pet-avatar bg-peach" aria-hidden="true">🐶</div>
+              <div class="pet-info">
+                <div class="pet-title-row">
+                  <h3>Milo</h3>
+                  <span class="pet-age">3 Tahun • Jantan</span>
+                </div>
+                <p class="pet-bio">Ukuran kecil, tidak berisik, cocok untuk penghuni apartemen atau rumah dengan halaman minimalis.</p>
+                <div class="pet-traits">
+                  <span>Ukuran Kecil</span>
+                  <span>Tenang</span>
+                  <span>Sudah Steril</span>
+                </div>
+                <a href="#form-adopsi" class="btn btn-outline btn-full">Ajukan Adopsi</a>
+              </div>
+            </article>
+
+            <!-- Kartu 5: Boni (Kelinci) -->
+            <article class="pet-card" data-category="lainnya">
+              <div class="pet-card-top">
+                <span class="pet-badge">Kelinci</span>
+                <label class="like-toggle" aria-label="Sukai Boni">
+                  <input type="checkbox">
+                  <span class="heart-icon" aria-hidden="true">♥</span>
+                </label>
+              </div>
+              <div class="pet-avatar bg-sage" aria-hidden="true">🐇</div>
+              <div class="pet-info">
+                <div class="pet-title-row">
+                  <h3>Boni</h3>
+                  <span class="pet-age">1 Tahun • Jantan</span>
+                </div>
+                <p class="pet-bio">Suka sayuran segar dan rumput hay. Lembut saat digendong dan senang menjelajah ruang tamu.</p>
+                <div class="pet-traits">
+                  <span>Lembut</span>
+                  <span>Bersih</span>
+                  <span>Jinak</span>
+                </div>
+                <a href="#form-adopsi" class="btn btn-outline btn-full">Ajukan Adopsi</a>
+              </div>
+            </article>
+
+            <!-- Kartu 6: Kiko (Burung) -->
+            <article class="pet-card" data-category="lainnya">
+              <div class="pet-card-top">
+                <span class="pet-badge">Burung</span>
+                <label class="like-toggle" aria-label="Sukai Kiko">
+                  <input type="checkbox">
+                  <span class="heart-icon" aria-hidden="true">♥</span>
+                </label>
+              </div>
+              <div class="pet-avatar bg-cream" aria-hidden="true">🦜</div>
+              <div class="pet-info">
+                <div class="pet-title-row">
+                  <h3>Kiko</h3>
+                  <span class="pet-age">1.5 Tahun • Jantan</span>
+                </div>
+                <p class="pet-bio">Parkit cerdas yang senang berkicau ceria di pagi hari dan suka bertengger di bahu pemiliknya.</p>
+                <div class="pet-traits">
+                  <span>Ceria</span>
+                  <span>Jinak</span>
+                  <span>Aktif</span>
+                </div>
+                <a href="#form-adopsi" class="btn btn-outline btn-full">Ajukan Adopsi</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CARA ADOPSI (4 LANGKAH) ==================== -->
+    <section id="cara-adopsi" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Alur Sederhana</span>
+          <h2>4 Langkah Menjemput Sahabat Baru</h2>
+          <p>Proses adopsi dirancang mudah tanpa birokrasi berbelit.</p>
+        </div>
+
+        <ol class="steps-grid">
+          <li class="step-card">
+            <span class="step-number">1</span>
+            <h3>Pilih Hewan</h3>
+            <p>Telusuri profil hewan yang tersedia dan pilih yang paling sesuai dengan gaya hidupmu.</p>
+          </li>
+
+          <li class="step-card">
+            <span class="step-number">2</span>
+            <h3>Isi Formulir Singkat</h3>
+            <p>Lengkapi data diri dan informasi singkat mengenai lingkungan tempat tinggalmu.</p>
+          </li>
+
+          <li class="step-card">
+            <span class="step-number">3</span>
+            <h3>Sesi Kenalan</h3>
+            <p>Datang ke shelter atau jadwalkan panggilan video untuk berinteraksi langsung dengan hewan pilihanmu.</p>
+          </li>
+
+          <li class="step-card">
+            <span class="step-number">4</span>
+            <h3>Bawa Pulang</h3>
+            <p>Tanda tangani komitmen adopsi dan bawa pulang anggota keluarga barumu dengan panduan lengkap.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==================== TESTIMONI ==================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Cerita Keluarga</span>
+          <h2>Mereka yang Sudah Pulang ke Rumah</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <blockquote class="testimonial-card">
+            <p>"Awalnya ragu karena baru pertama kali memelihara kucing. Tim Pawmily sangat membantu menjelaskan kebutuhan Moka sampai sekarang dia jadi bagian penting di rumah."</p>
+            <footer>
+              <strong>Nadia &amp; Moka</strong>
+              <span>Adopsi Januari 2026</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card">
+            <p>"Prosesnya jelas dan transparan. Leo sudah divaksin dan sangat ramah dengan anak-anak kami. Keputusan terbaik tahun ini untuk keluarga kecil kami."</p>
+            <footer>
+              <strong>Keluarga Dimas &amp; Leo</strong>
+              <span>Adopsi Maret 2026</span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ (PURE CSS DETAILS/SUMMARY) ==================== -->
+    <section id="faq" class="section section-alt">
+      <div class="container container-narrow">
+        <div class="section-header">
+          <span class="section-eyebrow">Pertanyaan Umum</span>
+          <h2>Hal yang Sering Ditanyakan</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>Apakah ada biaya adopsi di Pawmily?</summary>
+            <p>Kami tidak memungut biaya jual-beli hewan. Namun terdapat donasi subsidi perawatan medis (vaksin &amp; steril) sebesar Rp150.000 – Rp300.000 yang seluruhnya digunakan untuk menyelamatkan hewan jalanan berikutnya.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Apa saja syarat untuk mengajukan adopsi?</summary>
+            <p>Berusia minimal 21 tahun, mendapat persetujuan seluruh anggota keluarga serumah, berkomitmen merawat hewan seumur hidupnya, dan bersedia memberikan kabar perkembangan di bulan pertama.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Bagaimana jika hewan sulit beradaptasi di minggu pertama?</summary>
+            <p>Wajar jika hewan membutuhkan waktu 3–14 hari untuk menyesuaikan diri. Relawan kami akan mendampingi melalui konsultasi gratis. Jika terjadi kendala serius, hewan dapat dikembalikan ke shelter tanpa penalti.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Apakah saya bisa berkunjung dulu sebelum memutuskan?</summary>
+            <p>Tentu saja! Kamu bisa menjadwalkan kunjungan ke shelter kami setiap hari Selasa hingga Minggu pukul 10.00 – 17.00 WIB.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA BANNER ==================== -->
+    <section class="cta-section">
+      <div class="container cta-inner">
+        <h2>Siap Membuka Pintu untuk Sahabat Baru?</h2>
+        <p>Satu keputusan kecil darimu berarti kehidupan baru yang hangat bagi mereka.</p>
+        <a href="#form-adopsi" class="btn btn-white">Mulai Pengajuan Adopsi</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== MODAL FORM ADOPSI (PURE CSS :TARGET) ==================== -->
+  <div id="form-adopsi" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2 id="modal-title">Formulir Pengajuan Adopsi</h2>
+        <a href="#hewan" class="modal-close" aria-label="Tutup formulir">✕</a>
+      </div>
+      <p class="modal-subtitle">Isi data singkat di bawah ini, tim kami akan menghubungimu dalam 1×24 jam.</p>
+
+      <form class="adoption-form" action="#terima-kasih">
+        <div class="form-group">
+          <label for="nama-lengkap">Nama Lengkap</label>
+          <input type="text" id="nama-lengkap" name="nama" placeholder="Contoh: Rina Wijaya" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="whatsapp">Nomor WhatsApp</label>
+            <input type="tel" id="whatsapp" name="whatsapp" placeholder="0812-3456-7890" required>
+          </div>
+          <div class="form-group">
+            <label for="pilihan-hewan">Hewan yang Diminati</label>
+            <select id="pilihan-hewan" name="hewan">
+              <option value="Mochi">Mochi (Kucing)</option>
+              <option value="Bruno">Galang (Anjing)</option>
+              <option value="Cleo">Miko (Kucing)</option>
+              <option value="Milo">Milo (Anjing)</option>
+              <option value="Boni">Boni (Kelinci)</option>
+              <option value="Kiko">Koki (Burung)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="hunian">Jenis Tempat Tinggal</label>
+          <select id="hunian" name="hunian">
+            <option value="rumah-halaman">Rumah dengan halaman</option>
+            <option value="rumah-tanpa-halaman">Rumah tanpa halaman</option>
+            <option value="apartemen">Apartemen / Kos ramah hewan</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="alasan">Ceritakan singkat alasan ingin mengadopsi</label>
+          <textarea id="alasan" name="alasan" rows="3" placeholder="Misal: Saya bekerja dari rumah dan ingin teman berbulu yang tenang..."></textarea>
+        </div>
+
+        <div class="modal-actions">
+          <a href="#hewan" class="btn btn-secondary">Batal</a>
+          <button type="submit" class="btn btn-primary">Kirim Pengajuan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL KONFIRMASI (PURE CSS :TARGET) ==================== -->
+  <div id="terima-kasih" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="thanks-title">
+    <div class="modal-box modal-thanks">
+      <div class="thanks-icon" aria-hidden="true">🐾</div>
+      <h2 id="thanks-title">Pengajuan Terkirim!</h2>
+      <p>Terima kasih telah membuka hatimu untuk mengadopsi. Tim Pawmily akan segera menghubungimu via WhatsApp untuk menjadwalkan sesi kenalan.</p>
+      <a href="#hewan" class="btn btn-primary">Kembali ke Halaman</a>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="brand brand-light">
+          <span class="brand-icon" aria-hidden="true">🐾</span>
+          <span class="brand-text">Pawmily</span>
+        </a>
+        <p>Menghubungkan hewan penyelamatan dengan keluarga penyayang sejak 2021.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Navigasi</h3>
+        <ul>
+          <li><a href="#tentang">Tentang Kami</a></li>
+          <li><a href="#hewan">Daftar Hewan</a></li>
+          <li><a href="#cara-adopsi">Cara Adopsi</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Kontak Shelter</h3>
+        <p>Jl. Melati No. 24, Bandung</p>
+        <p>Selasa – Minggu, 10.00 – 17.00 WIB</p>
+        <p>halo@pawmily.id</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Pawmily Indonesia. Semua hak dilindungi.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
